@@ -1,0 +1,100 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+:root{
+    --bg:#BAE6FD;
+    --gameBG:#0EA5E9;
+    --gameBlock:#7DD3FC;
+    --gameFontColor:#082F49;
+    --radius:7px;
+    --padding:12px;
+}
+
+body{
+    font-family:sans-serif;
+    width:100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameContainer{
+    width: min(95vw,720px);
+    border-radius: var(--radius);
+    padding: var(--padding);
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+}
+
+#gameHeader{
+    /* padding: var(--padding); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#gameHeader>button{
+    padding: var(--padding) 1rem;
+    border-radius: var(--radius);
+    background-color: var(--gameBG);
+    color: var(--bg);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+#gameHeader>button:hover{opacity: 0.8;}
+#gameHeader>p{
+    color: var(--gameFontColor);
+    font-weight: bold;
+}
+
+#gameGame{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: var(--padding);
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: var(--radius);
+    padding: var(--padding);
+    background-color: var(--gameBG);
+}
+
+.gameBlock, .moveableGameBlock{
+    border-radius: var(--radius);
+    background-color: var(--gameBlock);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 3rem;
+    color: var(--gameFontColor);
+}
+.moveableGameBlock{
+    position: absolute;
+    transition:all 0.7s;
+}
+.moveableGameBlock.lightText{
+    color: #FFFBEB;
+}
+
+#gameBlocksContainer{
+    position: absolute;
+    left: 0;top: 0;right: 0;bottom: 0;
+    padding: var(--padding);
+}
+.gameBlock-2{background-color: #FFFBEB;}
+.gameBlock-4{background-color: #FEF3C7;}
+.gameBlock-8{background-color: #FDE68A;}
+.gameBlock-16{background-color: #FCD34D;}
+.gameBlock-32{background-color: #FBBF24;}
+.gameBlock-64{background-color: #F59E0B;}
+.gameBlock-128{background-color: #D97706;}
+.gameBlock-256{background-color: #B45309;}
+.gameBlock-512{background-color: #92400E;}
+.gameBlock-1024{background-color: #78350F;}
+.gameBlock-2048{background-color: #451A03;}

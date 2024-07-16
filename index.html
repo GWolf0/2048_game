@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048 Game (VITE VANILLA-TS)</title>
+  </head>
+  <body>
+
+    <div id="gameContainer">
+      <section id="gameHeader">
+          <button id="gameRetryBtn">Retry</button><button id="logBtn">LOG</button>
+          <p id="gameStepsLabel">Steps: 0</p>
+      </section>
+      <section id="gameGame">
+          <div class="gameBlock" id="specialRefBlock"></div><div class="gameBlock"></div><div class="gameBlock"></div><div class="gameBlock"></div>
+          <div class="gameBlock"></div><div class="gameBlock"></div><div class="gameBlock"></div><div class="gameBlock"></div>
+          <div class="gameBlock"></div><div class="gameBlock"></div><div class="gameBlock"></div><div class="gameBlock"></div>
+          <div class="gameBlock"></div><div class="gameBlock"></div><div class="gameBlock"></div><div class="gameBlock"></div>
+          <section id="gameBlocksContainer">
+
+          </section>
+      </section>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
